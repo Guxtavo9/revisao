@@ -1,27 +1,29 @@
-// const nome = document.querySelector("#name").value;
-// const email = document.querySelector("#email").value;
-const form = document.querySelector('#form')
+// const form = document.querySelector("#form");
 
-fomr.addEventListener("submit", async () => {
-  const data = {
-    nome,
-    email,
-  };
-  try{
-    await axios.post('/', data)
-  } catch(error) {
-    console.log(error);
-    
-  }
-});
+// form.addEventListener("submit", async (event) => {
+//   event.preventDefault();
+//   const name = form.name.value;
+//   const email = form.email.value;
+
+//   const data = {
+//     name,
+//     email,
+//   };
+//   console.log(data);
+//   try {
+//     await axios.post("/", data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 // document.addEventListener("DOMContentLoaded", async (event) => {
 //   const tableBody = document.querySelector("tbody");
-//   const response = await axios.get("http://localhost:3000/");
+//   const response = await axios.get("http://localhost:3000/listar");
 //   response.data.forEach((user) => {
 //     const row = tableBody.insertRow(-1);
 //     row.insertCell(0).innerHTML = user.id;
 //     row.insertCell(1).innerHTML = user.name;
-//     row.insertCell(1).innerHTML = user.email;
+//     row.insertCell(2).innerHTML = user.email;
 //   });
 // });

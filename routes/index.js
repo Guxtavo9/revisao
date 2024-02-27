@@ -16,15 +16,19 @@ app.get("/listar", async (req, res) => {
 // POST
 app.post("/", async (req, res, next) => {
   const { name, email } = req.body;
+  try {
+    const newUser = await prisma.user.create({
+      data: {
+        name,
+        email,
+      },
+    })  
+    res.json(newUser)
+  } catch (error) {
 
-  const newUser = await prisma.user.create({
-    data: {
-      name,
-      email,
-    },
-  });
+    console.error(error)
+  }
 
-  res.json(newUser);
 });
 
 app.listen(3000, () => {
